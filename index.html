@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Help Centre | Navodaya Institute of Technology, Kanpur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600&family=Hind:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff; --soft: #f2f5f3; --ink: #1c2421; --muted: #55625d;
+    --green: #1f4d3a; --saffron: #c97a12; --line: #d9e1dd;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121815; --soft: #1a221e; --ink: #e6ece9; --muted: #a3b0aa;
+      --green: #7fc2a2; --saffron: #f0b55a; --line: #2c3833;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 "Hind", system-ui, sans-serif; }
+  header { border-bottom: 3px solid var(--saffron); }
+  .bar { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .crest { font: 600 1.3rem/1.2 "Literata", Georgia, serif; color: var(--green); }
+  .crest small { display: block; font: 400 0.85rem "Hind", sans-serif; color: var(--muted); }
+  nav a { color: var(--ink); text-decoration: none; margin-left: 20px; font-size: 0.95rem; }
+  nav a:hover, nav a:focus-visible { color: var(--green); text-decoration: underline; }
+  main { max-width: 1180px; margin: 0 auto; padding: 40px 24px 64px; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: start; }
+  h1 { font: 600 2.4rem/1.15 "Literata", Georgia, serif; color: var(--green); margin: 0 0 12px; }
+  h2 { font: 500 1.25rem/1.3 "Literata", Georgia, serif; margin: 36px 0 8px; }
+  .lead { color: var(--muted); max-width: 60ch; margin: 0; }
+  ul { padding-left: 20px; margin: 8px 0; max-width: 60ch; }
+  .hours { background: var(--soft); border-left: 4px solid var(--saffron); padding: 14px 18px; margin-top: 12px; max-width: 60ch; }
+  aside { position: sticky; top: 24px; }
+  .assistant-label { font-weight: 500; margin: 0 0 4px; }
+  .assistant-hint { color: var(--muted); font-size: 0.9rem; margin: 0 0 12px; }
+  iframe { width: 100%; height: 640px; border: 1px solid var(--line); border-radius: 12px; background: var(--soft); }
+  footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; text-align: center; padding: 20px 24px; }
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; gap: 32px; }
+    aside { position: static; }
+    nav a { margin: 0 16px 0 0; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="crest">Navodaya Institute of Technology<small>Kanpur, Uttar Pradesh</small></div>
+    <nav aria-label="Main">
+      <a href="#scholarships">Scholarships</a>
+      <a href="#fees">Fees</a>
+      <a href="#office">Help desk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1>Student Help Centre</h1>
+    <p class="lead">Questions about scholarships, fees, hostel or exams? Ask our assistant on this page. It answers from the institute's official policy documents and shows the page each answer comes from.</p>
+
+    <h2 id="scholarships">Scholarships 2025–26</h2>
+    <ul>
+      <li>Merit-cum-Means Scholarship for B.Tech years 2 to 4</li>
+      <li>Sports Excellence Scholarship for state-level medal winners</li>
+      <li>Girl Child Tuition Waiver for eligible female students</li>
+    </ul>
+
+    <h2 id="fees">Fees and refunds</h2>
+    <p class="lead">Tuition, hostel and mess fees, instalment dates, late fees and the refund schedule are all covered by the Admission and Fee Rules.</p>
+
+    <h2 id="office">Help desk</h2>
+    <div class="hours">Student Affairs Office, Admin Block, Ground Floor<br>Monday to Saturday, 9:30 am to 5:00 pm</div>
+  </section>
+
+  <aside aria-label="Ask the assistant">
+    <p class="assistant-label">Ask the Help Centre assistant</p>
+    <p class="assistant-hint">Try: "Am I eligible for the merit-cum-means scholarship?"</p>
+    <!-- Assistant link from Dashboard → Assistant. If you regenerate the link, update the src below. -->
+    <iframe src="https://know-pilot-frontend.vercel.app/a/EsOy9_Ik3XHbAwHSAoCIYu_HnUuOpotzZQj2iUMepjk" title="Navodaya Institute of Technology Assistant" loading="lazy"></iframe>
+  </aside>
+</main>
+
+<footer>Fictional institute for demonstration. Assistant powered by KnowPilot.</footer>
+</body>
+</html>
